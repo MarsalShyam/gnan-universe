@@ -5,6 +5,7 @@ import Events from '../components/Events';
 import Achievements from '../components/Achievements';
 import Gallery from '../components/Gallery';
 import Organizers from '../components/Organizers';
+import Memorabilia from '../components/Memorabillia';
 
 const Home = () => {
     return (
@@ -14,9 +15,10 @@ const Home = () => {
             <Achievements />
             <Gallery />
             <Organizers />
+            <Memorabilia/>
 
             {/* Memorabilia Section */}
-            <motion.section
+            {/* <motion.section
                 className="py-20 px-4 bg-dark"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
@@ -43,7 +45,7 @@ const Home = () => {
                         Explore Full Gallery
                     </button>
                 </div>
-            </motion.section>
+            </motion.section> */}
         </div>
     );
 };

@@ -17,7 +17,7 @@ const Navbar = () => {
     <nav className="bg-gradient-to-r from-blue-900 to-gray-900 fixed w-full z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex justify-between h-16 items-center">
         <Link to="/" className="text-white text-2xl font-bold">
-          Gnanuniverse
+          GnanUniverse
         </Link>
 
         {/* Desktop Menu */}
