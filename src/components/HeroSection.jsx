@@ -199,10 +199,10 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            A universe of limitless learning, innovation, and excellence at <span className='text-blue-300'>Gnanamani College of Technology.</span>
+            A universe of limitless learning, innovation, and excellence at <span className='text-blue-300 underline'>Gnanamani College of Technology.</span>
           </motion.p>
           <motion.div 
-            className="flex flex-col sm:flex-row justify-center gap-4 px-4"
+            className="flex flex-row justify-center gap-4 px-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}

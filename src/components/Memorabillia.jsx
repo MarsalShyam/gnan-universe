@@ -46,7 +46,7 @@ export default function Memorabilia() {
             
             {/* Newsletter Subscription */}
             <motion.section
-                className="py-16 px-6 bg-gray-900 text-center text-light"
+                className="py-16 px-6 bg-gray-900 text-center text-blue-950"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
@@ -59,7 +59,7 @@ export default function Memorabilia() {
                         placeholder="Enter your email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        className="px-5 py-3 rounded-full text-dark w-72 text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                        className="border-2 border-blue-950 px-5 py-3 rounded-full text-white w-72 text-lg shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500"
                         required
                     />
                     <button type="submit" className="bg-blue-600 text-white px-8 py-3 rounded-full text-lg shadow-md hover:bg-blue-500 transition-all">
