@@ -6,10 +6,12 @@ import Achievements from '../components/Achievements';
 import Gallery from '../components/Gallery';
 import Organizers from '../components/Organizers';
 import Memorabilia from '../components/Memorabillia';
+// import CollegeLogo from '../components/CollegeLogo';
 
 const Home = () => {
     return (
         <div className="pt-16"> {/* Offset for fixed navbar */}
+        {/* <CollegeLogo/> */}
             <HeroSection />
             <Events />
             <Achievements />
