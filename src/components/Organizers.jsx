@@ -6,7 +6,7 @@ const organizers = [
   { name: 'Dr. T. Arangannal', role: 'Chairman', linkedin: '#', email: '#' },
   { name: 'Mrs. P. Malaleena', role: 'Chairperson', linkedin: '#', email: '#' },
   { name: 'Ms. Madhuvanthinie Arangannal', role: 'Vice-Chairperson', linkedin: '#', email: '#' },
-  { name: 'Dhiraj Kumar', role: 'Faculty Coordinator', linkedin: '#', email: '#' }
+  { name: 'eamims Kumar', role: 'Faculty Coordinator', linkedin: '#', email: '#' }
 ];
 
 const socialClubMembers = [
