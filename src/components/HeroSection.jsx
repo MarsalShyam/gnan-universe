@@ -207,10 +207,10 @@ const HeroSection = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            <button className="bg-blue-500 px-4 md:px-6 py-3 rounded-full hover:bg-blue-600 transition shadow-lg flex items-center gap-2 justify-center text-sm sm:text-base">
+            <button className="bg-blue-500 px-3 md:px-6 py-3 rounded-full hover:bg-blue-600 transition shadow-lg flex items-center gap-2 justify-center text-sm sm:text-base">
               Explore Events <FiArrowRight />
             </button>
-            <button className="border-2 border-white px-4 md:px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition text-sm sm:text-base">
+            <button className="border-2 border-white px-3 md:px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition text-sm sm:text-base">
               Watch Showreel
             </button>
           </motion.div>
