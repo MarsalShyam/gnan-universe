@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
+import unilogo from '../assets/images/unilogo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,8 +17,8 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-900 to-gray-900 fixed w-full z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex justify-between h-16 items-center">
-        <Link to="/" className="text-white text-2xl font-bold">
-          GnanUniverse
+        <Link to="/" className="text-white text-2xl font-bold flex justify-center items-center gap-2">
+          <span className='h-14 w-14'><img className='rounded-full' src={unilogo}/></span>GnyanMediaUniverse
         </Link>
 
         {/* Desktop Menu */}

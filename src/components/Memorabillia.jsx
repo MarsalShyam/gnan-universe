@@ -72,7 +72,7 @@ export default function Memorabilia() {
                     </div>
                 )}
             </motion.section>
-            
+                         
             {/* Footer */}
             <footer className="bg-gray-950 py-8 text-center text-light">
                 <p className="text-light/60 text-lg">&copy; {new Date().getFullYear()} GnanUniverse. All rights reserved.</p>

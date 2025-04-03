@@ -1,11 +1,12 @@
-import { motion } from 'framer-motion';
-import { FiImage } from 'react-icons/fi';
+// import { motion } from 'framer-motion';
+// import { FiImage } from 'react-icons/fi';
 import HeroSection from '../components/HeroSection';
 import Events from '../components/Events';
 import Achievements from '../components/Achievements';
 import Gallery from '../components/Gallery';
 import Organizers from '../components/Organizers';
 import Memorabilia from '../components/Memorabillia';
+// import HeroSection2 from '../components/HeroSection2';
 // import CollegeLogo from '../components/CollegeLogo';
 
 const Home = () => {
@@ -13,6 +14,7 @@ const Home = () => {
         <div className="pt-16"> {/* Offset for fixed navbar */}
         {/* <CollegeLogo/> */}
             <HeroSection />
+            {/* <HeroSection2/> */}
             <Events />
             <Achievements />
             <Gallery />
