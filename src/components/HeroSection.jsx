@@ -101,8 +101,8 @@
 
 
 import { useState, useEffect } from 'react';
-import { motion,useMotionValue,useTransform,animate } from 'framer-motion';
-import { FiInstagram,FiCamera,FiVideo, FiFacebook, FiDownload, FiLinkedin, FiTwitter, FiYoutube, FiMail } from 'react-icons/fi';
+import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
+import { FiInstagram, FiCamera, FiVideo, FiFacebook, FiDownload, FiLinkedin, FiTwitter, FiYoutube, FiMail } from 'react-icons/fi';
 import { FiArrowRight, FiChevronDown } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import ticket from '../assets/images/gnyanfest.png';
@@ -142,7 +142,7 @@ const HeroSection = () => {
     }
 
     return timeLeft;
-};
+  };
 
   const [timeLeft, setTimeLeft] = useState(calculateTimeLeft());
 
@@ -203,51 +203,51 @@ const HeroSection = () => {
         className="container mx-auto px-4 sm:px-6 text-center flex-1 flex items-center"
       >
         <div className="max-w-4xl mx-auto w-full">
-        <motion.h1
-  className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ delay: 0.2 }}
->
-  Welcome to{' '}
-  <motion.span 
-    className="inline-flex items-center"
-    whileHover={{ scale: 1.02 }}
-  >
-    {/* Gradient definition - should be outside text flow */}
-    <svg aria-hidden="true" className="absolute w-0 h-0">
-      <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-        <stop offset="0%" stopColor="#60a5fa" /> {/* blue-400 */}
-        <stop offset="100%" stopColor="#8b5cf6" /> {/* purple-500 */}
-      </linearGradient>
-    </svg>
+          <motion.h1
+            className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6 leading-tight"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            Welcome to{' '}
+            <motion.span
+              className="inline-flex items-center"
+              whileHover={{ scale: 1.02 }}
+            >
+              {/* Gradient definition - should be outside text flow */}
+              <svg aria-hidden="true" className="absolute w-0 h-0">
+                <linearGradient id="icon-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stopColor="#60a5fa" /> {/* blue-400 */}
+                  <stop offset="100%" stopColor="#8b5cf6" /> {/* purple-500 */}
+                </linearGradient>
+              </svg>
 
-    {/* Text part with gradient */}
-    <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-      Gnayn
-    </span>
+              {/* Text part with gradient */}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Gnayn
+              </span>
 
-    {/* Icon with gradient application */}
-    <motion.div 
-      className="mx-2 relative"
-      whileHover={{ rotate: 15, scale: 1.1 }}
-      transition={{ type: "spring", stiffness: 300 }}
-    >
-      <FiCamera
-        className="w-8 h-8 sm:w-10 sm:h-10"
-        style={{ 
-          stroke: 'url(#icon-gradient)',
-          filter: 'drop-shadow(0 2px 4px rgba(139, 92, 246, 0.2))'
-        }}
-      />
-    </motion.div>
+              {/* Icon with gradient application */}
+              <motion.div
+                className="mx-2 relative"
+                whileHover={{ rotate: 15, scale: 1.1 }}
+                transition={{ type: "spring", stiffness: 300 }}
+              >
+                <FiCamera
+                  className="w-8 h-8 sm:w-10 sm:h-10"
+                  style={{
+                    stroke: 'url(#icon-gradient)',
+                    filter: 'drop-shadow(0 2px 4px rgba(139, 92, 246, 0.2))'
+                  }}
+                />
+              </motion.div>
 
-    {/* Second part of text gradient */}
-    <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
-      Universe
-    </span>
-  </motion.span>
-</motion.h1>
+              {/* Second part of text gradient */}
+              <span className="bg-gradient-to-r from-purple-500 to-blue-400 bg-clip-text text-transparent">
+                Universe
+              </span>
+            </motion.span>
+          </motion.h1>
           <motion.p
             className="text-lg sm:text-xl opacity-80 mb-8 max-w-2xl mx-auto px-4"
             initial={{ opacity: 0 }}
@@ -318,36 +318,36 @@ const HeroSection = () => {
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
-        <motion.div 
-          whileHover={{ scale: 1.05 }} 
-          className="p-4 sm:p-6 bg-blue-700/90 backdrop-blur-sm rounded-xl shadow-lg text-center"
-        >
-          <div className="text-2xl sm:text-3xl font-bold mb-2">
-            <AnimatedNumber value={19} />
-          </div>
-          <div className="text-sm sm:text-base opacity-90">Departments</div>
-        </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-4 sm:p-6 bg-blue-700/90 backdrop-blur-sm rounded-xl shadow-lg text-center"
+          >
+            <div className="text-2xl sm:text-3xl font-bold mb-2">
+              <AnimatedNumber value={19} />
+            </div>
+            <div className="text-sm sm:text-base opacity-90">Departments</div>
+          </motion.div>
 
-        <motion.div 
-          whileHover={{ scale: 1.05 }} 
-          className="p-4 sm:p-6 bg-blue-600/90 backdrop-blur-sm rounded-xl shadow-lg text-center"
-        >
-          <div className="text-2xl sm:text-3xl font-bold mb-2">
-            <AnimatedNumber value={150} />
-          </div>
-          <div className="text-sm sm:text-base opacity-90">Teams</div>
-        </motion.div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-4 sm:p-6 bg-blue-600/90 backdrop-blur-sm rounded-xl shadow-lg text-center"
+          >
+            <div className="text-2xl sm:text-3xl font-bold mb-2">
+              <AnimatedNumber value={150} />
+            </div>
+            <div className="text-sm sm:text-base opacity-90">Teams</div>
+          </motion.div>
 
-        <motion.div 
-          whileHover={{ scale: 1.05 }} 
-          className="p-4 sm:p-6 bg-blue-500/90 backdrop-blur-sm rounded-xl shadow-lg text-center"
-        >
-          <div className="text-2xl sm:text-3xl font-bold mb-2">
-            <AnimatedNumber value={400} />
-          </div>
-          <div className="text-sm sm:text-base opacity-90">Participants</div>
-        </motion.div>
-      </div>
+          <motion.div
+            whileHover={{ scale: 1.05 }}
+            className="p-4 sm:p-6 bg-blue-500/90 backdrop-blur-sm rounded-xl shadow-lg text-center"
+          >
+            <div className="text-2xl sm:text-3xl font-bold mb-2">
+              <AnimatedNumber value={400} />
+            </div>
+            <div className="text-sm sm:text-base opacity-90">Participants</div>
+          </motion.div>
+        </div>
       </div>
 
       {/* Scrolling Indicator */}

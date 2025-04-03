@@ -51,7 +51,7 @@ export default function Memorabilia() {
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
             >
-                <h3 className="text-3xl font-bold mb-6">Subscribe to GnanUniverse Newsletter</h3>
+                <h3 className="text-3xl font-bold mb-6">Subscribe to GnanMediaUniverse Newsletter</h3>
                 <p className="text-light/70 mb-8 text-lg">Stay updated with the latest events, insights, and stories from GnanUniverse.</p>
                 <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center justify-center gap-4">
                     <input
@@ -75,7 +75,7 @@ export default function Memorabilia() {
                          
             {/* Footer */}
             <footer className="bg-gray-950 py-8 text-center text-light">
-                <p className="text-light/60 text-lg">&copy; {new Date().getFullYear()} GnanUniverse. All rights reserved.</p>
+                <p className="text-light/60 text-lg">&copy; {new Date().getFullYear()} GnanMediaUniverse. All rights reserved.</p>
             </footer>
         </>
     );

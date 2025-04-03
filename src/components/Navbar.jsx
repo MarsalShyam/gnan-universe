@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-blue-900 to-gray-900 fixed w-full z-50 shadow-lg">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10 flex justify-between h-16 items-center">
-        <Link to="/" className="text-white text-2xl font-bold flex justify-center items-center gap-2">
+        <Link to="/" className="text-white text-base  md:text-2xl font-bold flex justify-center items-center gap-2">
           <span className='h-14 w-14'><img className='rounded-full' src={unilogo}/></span>GnyanMediaUniverse
         </Link>
 
