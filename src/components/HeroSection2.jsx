@@ -55,7 +55,7 @@ const HeroSection = () => {
 
   return (
     <section
-  className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center text-white pt-20 pb-8"
+  className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center text-white pt-15 sm:pt-20 pb-8"
   style={{
     backgroundImage: `url(${slider1})`,
     backgroundSize: 'cover',
@@ -213,7 +213,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div
-            className="border md:border-none h-28  md:h-40 w-full bg-center bg-no-repeat bg-contain md:bg-cover overflow-hidden"
+            className="border md:border-none h-28  md:h-40 w-full bg-center bg-no-repeat bg-contain sm:bg-cover overflow-hidden"
             style={{
               backgroundImage: `url(${ticket})`,
               backgroundColor: 'transparent'
