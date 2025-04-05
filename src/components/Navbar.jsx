@@ -8,9 +8,9 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const links = [
     { name: 'Home', href: '/' },
-    { name: 'Events', href: '#events' },
-    { name: 'Achievements', href: '#achievements' },
-    { name: 'Gallery', href: '#gallery' },
+    { name: 'Events', href: '/events' },
+    { name: 'Achievements', href: '/achievements' },
+    { name: 'Gallery', href: '/gallery' },
     { name: 'Blog', href: '/blog' },
   ];
 

@@ -7,6 +7,9 @@ import Gal2023 from './pages/Gal2023';
 import Gal2022_Earlier from './pages/Gal2022_Earlier';
 
 import Workshops_tech from './pages/workshops_tech';
+import Events from './pages/Events';
+import Achievements from './pages/Achievements';
+import Gallery from './pages/Gallery';
 
 function App() {
   return (
@@ -19,6 +22,9 @@ function App() {
         <Route path='/gallery2023' element={<Gal2023/>}/>
         <Route path='/gallery2022-earlier' element={<Gal2022_Earlier/>}/>
         <Route path="/workshops_tech" element={<Workshops_tech/>}/>
+        <Route path="/events" element={<Events/>}/>
+        <Route path="/achievements" element={<Achievements/>}/>
+        <Route path="/gallery" element={<Gallery/>}/>
         
       </Routes>
     </Router>
