@@ -112,12 +112,14 @@
 // export default Gal2023;
 
 import { useState, useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { FaThList, FaUserGraduate, FaFutbol, FaMusic } from 'react-icons/fa';
 
 const Gal2023 = () => {
   const location = useLocation();
+  const navigate = useNavigate();
+
   const [activeTab, setActiveTab] = useState('all');
   const [images, setImages] = useState([]);
 
@@ -130,13 +132,14 @@ const Gal2023 = () => {
     }
   }, [location.search]);
 
+  // Load images dynamically
   useEffect(() => {
     const loadImages = async () => {
       try {
         const categoryImports = {
           'alumni-meet': import.meta.glob('../assets/images/2023/alumni-meet/*.{jpeg,jpg,png,svg}'),
           'performance': import.meta.glob('../assets/images/2023/performance/*.{jpeg,jpg,png,svg}'),
-          'sports-day': import.meta.glob('../assets/images/2023/sports-day/*.{jpeg,jpg,png,svg}')
+          'sports-day': import.meta.glob('../assets/images/2023/sports-day/*.{jpeg,jpg,png,svg}'),
         };
 
         const loadedImages = [];
@@ -151,7 +154,7 @@ const Gal2023 = () => {
             loadedImages.push({
               id: `${category}-${fileName}`,
               src: image.default,
-              category: category
+              category: category,
             });
           }
         }
@@ -175,6 +178,16 @@ const Gal2023 = () => {
     { id: 'performance', icon: <FaMusic />, label: 'Performance' },
   ];
 
+  // Handle tab switch + query update
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    if (tabId === 'all') {
+      navigate(location.pathname); // remove query
+    } else {
+      navigate(`${location.pathname}?category=${tabId}`);
+    }
+  };
+
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gray-50 pt-20 px-5 md:px-10">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">
@@ -186,7 +199,7 @@ const Gal2023 = () => {
           {tabs.map((tab) => (
             <motion.button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors flex-shrink-0
                 ${activeTab === tab.id
                   ? 'bg-indigo-600 text-white'
