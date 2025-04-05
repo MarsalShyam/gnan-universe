@@ -6,6 +6,8 @@ import { FiArrowRight, FiChevronDown } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
 import ticket from '../assets/images/gnyanfest.png';
 import slider1 from '../assets/images/slider1.jpg';
+import { AiOutlineClose } from "react-icons/ai";
+
 
 // New AnimatedNumber component
 const AnimatedNumber = ({ value }) => {
@@ -24,7 +26,9 @@ const AnimatedNumber = ({ value }) => {
   return <motion.span>{formatted}</motion.span>;
 };
 
-const HeroSection = () => {
+const HeroSection2 = () => {
+  const [hide,setHide]=useState(false);
+
   const calculateTimeLeft = () => {
     const eventDate = new Date("2025-04-11T00:00:00").getTime(); // Changed to April 11
     const now = new Date().getTime();
@@ -55,13 +59,13 @@ const HeroSection = () => {
 
   return (
     <section
-  className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center text-white pt-15 sm:pt-20 pb-8"
-  style={{
-    backgroundImage: `url(${slider1})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-  }}
->
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center text-white pt-15 sm:pt-20 pb-8"
+      style={{
+        backgroundImage: `url(${slider1})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       {/* Floating WhatsApp Icon */}
       <div className="fixed left-4 bottom-4 z-40">
         <motion.a
@@ -180,9 +184,10 @@ const HeroSection = () => {
       </motion.div>
 
       {/* Bottom Sections */}
-      <div className="container mx-auto px-4 sm:px-6 mt-8 space-y-6 sm:space-y-8">
+      <div className=" container mx-auto px-4 sm:px-6 mt-8 space-y-6 sm:space-y-8">
+        
         {/* Countdown Section */}
-        <div className="
+        <div className= {`border relative ${hide==true?"hidden":""}
   flex flex-col md:flex-row 
   bg-transparent backdrop-blur-sm 
   text-white rounded-xl 
@@ -190,8 +195,30 @@ const HeroSection = () => {
   hover:shadow-[0_0_25px_7px_rgba(191,219,254,0.9)]
   transition-shadow duration-300
   max-w-4xl mx-auto 
-  justify-center items-center
-">
+  justify-center items-center`}
+>    
+
+<motion.div
+  onClick={() => setHide(true)}
+  className="z-10 absolute top-0 left-0 p-1 m-2 bg-ve text-white text-2xl rounded-full shadow-lg shadow-red-400 cursor-pointer"
+  animate={{
+    scale: [1, 1.2, 1],
+    boxShadow: [
+      "0 0 0px rgba(248,113,113, 0.5)",    // soft red
+      "0 0 20px rgba(248,113,113, 0.8)",   // glow expand
+      "0 0 0px rgba(248,113,113, 0.5)"     // back to soft
+    ],
+  }}
+  transition={{
+    duration: 1,
+    repeat: Infinity,
+    ease: "easeInOut",
+  }}
+>
+  <AiOutlineClose />
+</motion.div>
+
+
           <div className='text-center  md:py-6 px-4'>
             <div className="py-1 flex flex-wrap justify-center gap-4 sm:gap-3 text-xl sm:text-xl font-semibold text-black md:text-white  ">
               <div className="flex flex-col px-2 sm:px-3 md:px-1 ">
@@ -270,4 +297,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default HeroSection2;

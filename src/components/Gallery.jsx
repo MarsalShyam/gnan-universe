@@ -1,6 +1,10 @@
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import { useState } from 'react';
+import img1 from '../assets/images/2024/alumni-meet/1.jpg'
+import img2 from '../assets/images/2024/performance/1.jpg'
+import img3 from '../assets/images/2024/sports-day/4.jpg'
+
 
 const Gallery = () => {
   const [selectedYear, setSelectedYear] = useState(null);
@@ -8,15 +12,15 @@ const Gallery = () => {
   const galleryData = [
     {
       year: "2024",
-      images: ["/images/gallery2024-1.jpg", "/images/gallery2024-2.jpg", "/images/gallery2024-3.jpg"],
+      images: [img1, img2,img3],
     },
     {
       year: "2023",
-      images: ["/images/gallery2023-1.jpg", "/images/gallery2023-2.jpg", "/images/gallery2023-3.jpg"],
+      images: [img1, img2,img3],
     },
     {
       year: "2022 & Earlier",
-      images: ["/images/gallery2022-1.jpg", "/images/gallery2021-2.jpg", "/images/gallery2020-3.jpg"],
+      images: [img1, img2,img3],
     },
     {
       year: "Workshops & Technical Events",
