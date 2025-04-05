@@ -4,37 +4,36 @@ import { FaThList, FaUserGraduate, FaFutbol, FaMusic } from 'react-icons/fa';
 
 const Gal2022_Earlier = () => {
   const [activeTab, setActiveTab] = useState('all');
-  
-  // Sample images data with categories
+
   const images = [
-    { id: 1, src: 'https://picsum.photos/400/300?1', category: 'alumany' },
-    { id: 2, src: 'https://picsum.photos/400/300?2', category: 'sports' },
+    { id: 1, src: 'https://picsum.photos/400/300?1', category: 'alumni-meet' },
+    { id: 2, src: 'https://picsum.photos/400/300?2', category: 'sports-day' },
     { id: 3, src: 'https://picsum.photos/400/300?3', category: 'performance' },
-    { id: 4, src: 'https://picsum.photos/400/300?4', category: 'alumany' },
-    { id: 5, src: 'https://picsum.photos/400/300?5', category: 'sports' },
+    { id: 4, src: 'https://picsum.photos/400/300?4', category: 'alumni-meet' },
+    { id: 5, src: 'https://picsum.photos/400/300?5', category: 'sports-day' },
     { id: 6, src: 'https://picsum.photos/400/300?6', category: 'performance' },
-    { id: 7, src: 'https://picsum.photos/400/300?7', category: 'alumany' },
-    { id: 8, src: 'https://picsum.photos/400/300?8', category: 'sports' },
+    { id: 7, src: 'https://picsum.photos/400/300?7', category: 'alumni-meet' },
+    { id: 8, src: 'https://picsum.photos/400/300?8', category: 'sports-day' },
     { id: 9, src: 'https://picsum.photos/400/300?9', category: 'performance' },
-    { id: 10, src: 'https://picsum.photos/400/300?10', category: 'alumany' },
-    { id: 11, src: 'https://picsum.photos/400/300?11', category: 'sports' },
+    { id: 10, src: 'https://picsum.photos/400/300?10', category: 'alumni-meet' },
+    { id: 11, src: 'https://picsum.photos/400/300?11', category: 'sports-day' },
     { id: 12, src: 'https://picsum.photos/400/300?12', category: 'performance' },
   ];
 
-  const filteredImages = activeTab === 'all' 
-    ? images 
+  const filteredImages = activeTab === 'all'
+    ? images
     : images.filter(img => img.category === activeTab);
 
   const tabs = [
     { id: 'all', icon: <FaThList />, label: 'All' },
-    { id: 'alumany', icon: <FaUserGraduate />, label: 'Alumany Meet' },
-    { id: 'sports', icon: <FaFutbol />, label: 'Sports Day' },
+    { id: 'alumni-meet', icon: <FaUserGraduate />, label: 'Alumni Meet' },
+    { id: 'sports-day', icon: <FaFutbol />, label: 'Sports Day' },
     { id: 'performance', icon: <FaMusic />, label: 'Performance' },
   ];
 
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-slate-50 pt-20 px-5 md:px-10 ">
-      <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-slate-800">
+    <div className="min-h-[calc(100vh-4rem)] bg-gray-50 pt-20 px-5 md:px-10">
+      <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">
         2022 & Earlier Memory Gallery
       </h1>
 
@@ -46,8 +45,8 @@ const Gal2022_Earlier = () => {
               onClick={() => setActiveTab(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors flex-shrink-0
                 ${activeTab === tab.id 
-                  ? 'bg-blue-600 text-white' 
-                  : 'bg-white text-slate-600 hover:bg-blue-50'}`}
+                  ? 'bg-indigo-600 text-white' 
+                  : 'bg-white text-gray-600 hover:bg-indigo-50'}`}
               layout
             >
               {tab.icon}
@@ -56,7 +55,7 @@ const Gal2022_Earlier = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 px-4 md:px-0"
           layout
         >
@@ -73,7 +72,7 @@ const Gal2022_Earlier = () => {
               >
                 <img
                   src={image.src}
-                  alt=""
+                  alt={`${image.category} ${image.id}`}
                   loading="lazy"
                   className="w-full h-48 md:h-56 object-cover transform transition-transform duration-300"
                 />

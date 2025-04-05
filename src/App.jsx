@@ -6,6 +6,8 @@ import Gal2024 from './pages/Gal2024';
 import Gal2023 from './pages/Gal2023';
 import Gal2022_Earlier from './pages/Gal2022_Earlier';
 
+import Workshops_tech from './pages/workshops_tech';
+
 function App() {
   return (
     <Router>
@@ -16,6 +18,8 @@ function App() {
         <Route path='/gallery2024' element={<Gal2024/>}/>
         <Route path='/gallery2023' element={<Gal2023/>}/>
         <Route path='/gallery2022-earlier' element={<Gal2022_Earlier/>}/>
+        <Route path="/workshops_tech" element={<Workshops_tech/>}/>
+        
       </Routes>
     </Router>
   );
