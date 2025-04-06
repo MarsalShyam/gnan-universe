@@ -1,40 +1,52 @@
 import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { FaThList, FaUserGraduate, FaFutbol, FaMusic } from 'react-icons/fa';
 
-
 const Gal2024 = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [activeTab, setActiveTab] = useState('all');
   const [images, setImages] = useState([]);
 
+  // Extract category from URL
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoryFromQuery = params.get('category');
+    if (categoryFromQuery) {
+      setActiveTab(categoryFromQuery);
+    }
+  }, [location.search]);
+
+  // Load images dynamically
   useEffect(() => {
     const loadImages = async () => {
       try {
-        // Static glob imports for each category
         const categoryImports = {
           'alumni-meet': import.meta.glob('../assets/images/2024/alumni-meet/*.{jpeg,jpg,png,svg}'),
           'performance': import.meta.glob('../assets/images/2024/performance/*.{jpeg,jpg,png,svg}'),
-          'sports-day': import.meta.glob('../assets/images/2024/sports-day/*.{jpeg,jpg,png,svg}')
+          'sports-day': import.meta.glob('../assets/images/2024/sports-day/*.{jpeg,jpg,png,svg}'),
         };
 
         const loadedImages = [];
-        
+
         for (const [category, importFn] of Object.entries(categoryImports)) {
           const imageEntries = Object.entries(importFn);
-          
+
           for (const [path, importer] of imageEntries) {
             const image = await importer();
             const fileName = path.split('/').pop().split('.')[0];
-            
+
             loadedImages.push({
               id: `${category}-${fileName}`,
               src: image.default,
-              category: category
+              category: category,
             });
           }
         }
 
-        setImages(loadedImages.sort(() => Math.random() - 0.5)); // Optional shuffle
+        setImages(loadedImages.sort(() => Math.random() - 0.5)); // Shuffle
       } catch (error) {
         console.error('Error loading images:', error);
       }
@@ -43,9 +55,8 @@ const Gal2024 = () => {
     loadImages();
   }, []);
 
-  const filteredImages = activeTab === 'all' 
-    ? images 
-    : images.filter(img => img.category === activeTab);
+  const filteredImages =
+    activeTab === 'all' ? images : images.filter((img) => img.category === activeTab);
 
   const tabs = [
     { id: 'all', icon: <FaThList />, label: 'All' },
@@ -54,22 +65,33 @@ const Gal2024 = () => {
     { id: 'performance', icon: <FaMusic />, label: 'Performance' },
   ];
 
+  // Handle tab switch + query update
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    if (tabId === 'all') {
+      navigate(location.pathname); // remove query
+    } else {
+      navigate(`${location.pathname}?category=${tabId}`);
+    }
+  };
+
   return (
-    <div className="min-h-[calc(100vh-4rem)] bg-gray-50 pt-20 px-5 md:px-10 ">
+    <div className="min-h-[calc(100vh-4rem)] bg-gray-50 pt-20 px-5 md:px-10">
       <h1 className="text-3xl md:text-4xl font-bold text-center mb-8 md:mb-12 text-gray-800">
-        2024 Memory Gallery
+        2023 Memory Gallery
       </h1>
 
       <LayoutGroup>
-        <div className=" items-center flex overflow-x-auto pb-4 md:justify-center gap-2 md:gap-4 mb-8 md:mb-12">
+        <div className="flex overflow-x-auto pb-4 md:justify-center gap-2 md:gap-4 mb-8 md:mb-12">
           {tabs.map((tab) => (
             <motion.button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors flex-shrink-0
-                ${activeTab === tab.id 
-                  ? 'bg-indigo-600 text-white' 
-                  : 'bg-white text-gray-600 hover:bg-indigo-50'}`}
+                ${activeTab === tab.id
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-white text-gray-600 hover:bg-indigo-50'
+                }`}
               layout
             >
               {tab.icon}
@@ -78,11 +100,11 @@ const Gal2024 = () => {
           ))}
         </div>
 
-        <motion.div 
+        <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 px-4 md:px-0"
           layout
         >
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode="wait">
             {filteredImages.map((image) => (
               <motion.div
                 key={image.id}
