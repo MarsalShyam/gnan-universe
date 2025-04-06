@@ -138,11 +138,19 @@ const HeroSection2 = () => {
                 Gnayn
               </span>
 
+              {/* <motion.div
+                className="text-5xl text-blue-500 mb-4"
+                animate={{ scale: [1, 1.1, 1], rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
+              >
+                {service.icon}
+              </motion.div> */}
+
               {/* Icon with gradient application */}
               <motion.div
                 className="mx-2 relative"
-                whileHover={{ rotate: 15, scale: 1.1 }}
-                transition={{ type: "spring", stiffness: 300 }}
+                animate={{ scale: [1, 1.1, 1], rotate: [0, 10, -10, 0] }}
+                transition={{ duration: 1.5, repeat: Infinity, repeatType: "reverse" }}
               >
                 <FiCamera
                   className="w-8 h-8 sm:w-10 sm:h-10"
