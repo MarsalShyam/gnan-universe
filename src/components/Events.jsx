@@ -138,29 +138,36 @@
 
 import { motion } from 'framer-motion'; 
 import { FiCalendar, FiArrowUpRight } from 'react-icons/fi';
+import techimg from '../assets/images/slider1.jpg';
 
 const Events = () => {
   const events = [
     { 
       id: 1, 
       title: 'Digital Content Masterclass',
-      date: '2023-12-15',
+      date: '2025-12-15',
       type: 'Workshop',
-      status: 'upcoming'
+      status: 'upcoming',
+      image:techimg,
+      venue:'Biomedical Block'
     },
     { 
       id: 2, 
       title: 'AI & Future Tech Summit',
-      date: '2024-01-20',
+      date: '2025-01-20',
       type: 'Conference',
-      status: 'upcoming'
+      status: 'upcoming',
+      image:techimg,
+      venue:'Michal Faradey Hall'
     },
     { 
       id: 3, 
       title: 'Creative UI/UX Hackathon',
-      date: '2024-02-10',
+      date: '2025-02-10',
       type: 'Competition',
-      status: 'upcoming'
+      status: 'upcoming',
+      image:techimg,
+      venue:'Mechnical Block'
     },
 
   ];
@@ -210,12 +217,13 @@ const Events = () => {
                       day: 'numeric'
                     })}
                   </p>
+                  <p className="text-sm text-gray-300"> Venue: {event.venue}</p>
                 </div>
                 <motion.button 
                   whileHover={{ x: 5 }}
                   className="flex items-center gap-2 text-blue-400 hover:text-blue-300 transition"
                 >
-                  Details <FiArrowUpRight className="text-xl" />
+                  <a href={event.image}>Details</a> <FiArrowUpRight className="text-xl" />
                 </motion.button>
               </div>
             </motion.div>
