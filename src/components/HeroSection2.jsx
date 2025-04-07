@@ -83,7 +83,7 @@ const HeroSection2 = () => {
           href="#join-us"
           className="bg-blue-500 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-r-full text-sm sm:text-lg font-semibold shadow-lg transition hover:bg-blue-600"
         >
-          Join Us
+          Visit Site
         </motion.a>
       </div>
 
@@ -94,7 +94,7 @@ const HeroSection2 = () => {
         { Icon: FiLinkedin, color: 'bg-blue-500',link:'https://www.linkedin.com/company/gnyanamani-educational-institutions/posts/?feedView=all' },
         // { Icon: FiTwitter, color: 'bg-sky-500',link:'' },
         { Icon: FiYoutube, color: 'bg-red-600',link:'https://www.youtube.com/@Gnyanamani/featured' },
-        { Icon: FiMail, color: 'bg-yellow-500',link:'info@gct.org.in' }
+        { Icon: FiMail, color: 'bg-yellow-500',link:'mailto:info@gct.org.in' }
         ].map(({ Icon, color,link }, index) => (
           <motion.a
             key={index}
