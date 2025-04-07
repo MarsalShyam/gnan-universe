@@ -7,6 +7,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import ticket from '../assets/images/gnyanfest.png';
 import slider1 from '../assets/images/slider1.jpg';
 import { AiOutlineClose } from "react-icons/ai";
+import { Link } from 'react-router-dom';
 
 
 // New AnimatedNumber component
@@ -77,15 +78,18 @@ const HeroSection2 = () => {
         </motion.a>
       </div>
 
-      {/* Join Us Button */}
+      {/* Visit Site Button */}
+      
       <div className="fixed left-0 top-1/3 -translate-y-1/2 z-50">
         <motion.a
-          href="#join-us"
+          href="https://gct.org.in/"
           className="bg-blue-500 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-r-full text-sm sm:text-lg font-semibold shadow-lg transition hover:bg-blue-600"
         >
           Visit Site
         </motion.a>
       </div>
+      
+      
 
       {/* Social Media Icons */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 space-y-2 sm:space-y-4 z-40 flex flex-col">
@@ -98,13 +102,12 @@ const HeroSection2 = () => {
         ].map(({ Icon, color,link }, index) => (
           <motion.a
             key={index}
-            href="#"
+            href={link}
             whileHover={{ scale: 1.1 }}
             className={`block p-2 sm:p-3 rounded-full shadow-lg transition ${color} hover:opacity-80`}
-          ><a href={link}>
+          >
             <Icon className="text-white text-lg sm:text-xl md:text-2xl" />
-          </a>
-            
+      
           </motion.a>
         ))}
       </div>
@@ -183,12 +186,16 @@ const HeroSection2 = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
+            <Link to='/events'>
             <button className="bg-blue-500 px-3 md:px-6 py-3 rounded-full hover:bg-blue-600 transition shadow-lg flex items-center gap-2 justify-center text-sm sm:text-base">
               Explore Events <FiArrowRight />
             </button>
-            <button className="border-2 border-white px-3 md:px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition text-sm sm:text-base">
+            </Link>
+            
+            <a href="https://www.instagram.com/gnyanamani_institutions/reels/"><button className="border-2 border-white px-3 md:px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition text-sm sm:text-base">
               Watch Showreel
-            </button>
+            </button></a>
+            
           </motion.div>
         </div>
       </motion.div>

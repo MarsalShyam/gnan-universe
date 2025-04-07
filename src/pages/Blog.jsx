@@ -279,11 +279,15 @@ import { motion } from 'framer-motion';
 import { FiArrowLeft, FiCalendar, FiClock } from 'react-icons/fi';
 import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import pdf from '../assets/BlogContent/pdf/harrisgnanprice.pdf'
+import gnanmlogo from '../assets/images/unilogo.png'
+import placeimg from '../assets/BlogContent/images/placeimage.jpg'
 
 const platformThumbnails = {
   twitter: 'https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg',
   linkedin: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png',
   facebook: 'https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg',
+  gnanmedia:gnanmlogo,
 };
 
 const Blog = () => {
@@ -295,52 +299,70 @@ const Blog = () => {
   const posts = [
     {
       id: 1,
-      title: 'Future of Social Media in Education',
-      excerpt: 'Exploring the transformative power of digital platforms...',
-      date: '2023-11-20',
-      readTime: '5 min',
-      socialLink: 'https://twitter.com/',
-      platform: 'twitter'
+      title: 'Harris - King of Hearts 💘 | Live in Salem - Apr 13',
+      excerpt: 'Dear students , special discount has been announced for our college students. If you want make use of it...',
+      date: '2025-04-5',
+      readTime: '2 min',
+      socialLink: pdf,
+      platform: 'gnanmedia'
     },
     {
       id: 2,
-      title: 'The Role of AI in Content Creation',
-      excerpt: 'How AI is reshaping the way we produce digital content...',
-      date: '2024-03-10',
-      readTime: '7 min',
-      socialLink: 'https://www.linkedin.com/',
-      platform: 'linkedin'
+      title: '🎉Parithabangal Live at GnyanFest 2025!',
+      excerpt: 'Gopi & Sudhakar are coming to #GnyanFest! Join us on April 11 for culturals, fun, and epic vibes—open to all college students!...',
+      date: '2025-03-5',
+      readTime: '1 min',
+      socialLink: 'https://www.facebook.com/share/v/12LJNB89jRz/',
+      platform: 'facebook'
     },
     {
       id: 3,
-      title: 'Cybersecurity in the Digital Age',
-      excerpt: 'Understanding the risks and preventive measures for online security...',
-      date: '2024-02-05',
-      readTime: '6 min',
-      socialLink: 'https://facebook.com/',
-      platform: 'facebook'
+      title: '🏷️Placement Day 2K25 - Dream Jobs Begin Here!',
+      excerpt: "🎓 Join us on April 10 for Placement Day 2K25 at Gnyanamani College! 116 ranks, 567 offers, and a special appearance by 🎤 Vijay TV's Thiru. Gopinath!...",
+      date: '2025-03-05',
+      readTime: '2 min',
+      socialLink: placeimg,
+      platform: 'gnanmedia'
     }
   ];
 
   const studentOpinions = [
     {
       id: 1,
-      name: 'Ganesh',
-      opinion: 'GnanUniverse has provided me with incredible opportunities to learn and grow in my field.',
-      videoUrl: 'https://www.youtube.com/embed/dQw4w9WgXcQ',
+      name: 'Akshaya',
+      opinion: "Hi, I'm Akshaya. At Gnyanamani College of Technology, everything—from the modern hostels and advanced lab facilities to the variety of tasty food—makes student life really enjoyable. It's a place where we feel comfortable, supported, and inspired to learn. And the best part? We get all of this with a focus on affordable, quality education.",
+      videoUrl: 'https://www.youtube.com/embed/UpLPH9NxmSM?si=Mh6i0kIWNJkaQsD',
       linkedin: 'https://linkedin.com/in/johndoe',
-      instagram: 'https://instagram.com/johndoe',
+      instagram: '#',
       email: 'mailto:johndoe@example.com'
     },
     {
       id: 2,
-      name: 'Suresh',
-      opinion: 'The faculty and resources at GnanUniverse have helped me excel in my career.',
-      videoUrl: 'https://www.youtube.com/embed/3JZ_D3ELwOQ',
+      name: 'K Mahaboob Begam',
+      opinion: "Hi, I'm K. Mahaboob Begam. My journey at Gnyanamani Educational Institutions has been truly transformative. The support, growth, and opportunities I've received here have shaped my future in the best way. If you're looking for a place that values excellence and personal growth, this is it. Admissions are open—don't miss your chance to be part of something great!",
+      videoUrl: 'https://www.youtube.com/embed/1CSiAMP6f_E?si=grngvhXGY81ETu71',
       linkedin: 'https://linkedin.com/in/janesmith',
-      instagram: 'https://instagram.com/janesmith',
+      instagram: '#',
       email: 'mailto:janesmith@example.com'
-    }
+    },
+    {
+      id: 3,
+      name: 'Arzal Razai',
+      opinion: "Hi, I'm Arzal Razai. At Gnyanamani College Of Technology, the support from our faculty is truly amazing. The staff here are so friendly and always go the extra mile to help us feel at home. No matter where you're from, you'll fell valued and guided every step of the way.",
+      videoUrl: 'https://www.youtube.com/embed/pyZaBpf7r7k?si=1wjxEuuWqpb8g6MJ',
+      linkedin: 'https://linkedin.com/in/janesmith',
+      instagram: '#',
+      email: 'mailto:janesmith@example.com'
+    },
+    {
+      id: 4,
+      name: 'Latika Sri',
+      opinion: "Hi, I'm Latika Sri. Being a part of Gnyanamani Educational Institutions has been a life-changing experience for me. The encouragement and quality education here helped me grow both personally and academically. If you're looking for a place where your dreams truly take flight, this is it. Admissions are open—come join us and shape your future with Gnyanamani!",
+      videoUrl: 'https://www.youtube.com/embed/w_9dgsyUR_8',
+      linkedin: 'https://linkedin.com/in/janesmith',
+      instagram: '#',
+      email: 'mailto:janesmith@example.com'
+    },
   ];
 
   return (
