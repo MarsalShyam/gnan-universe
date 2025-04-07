@@ -89,20 +89,22 @@ const HeroSection2 = () => {
 
       {/* Social Media Icons */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 space-y-2 sm:space-y-4 z-40 flex flex-col">
-        {[{ Icon: FiInstagram, color: 'bg-pink-500' },
-        { Icon: FiFacebook, color: 'bg-blue-600' },
-        { Icon: FiLinkedin, color: 'bg-blue-500' },
-        { Icon: FiTwitter, color: 'bg-sky-500' },
-        { Icon: FiYoutube, color: 'bg-red-600' },
-        { Icon: FiMail, color: 'bg-yellow-500' }
-        ].map(({ Icon, color }, index) => (
+        {[{ Icon: FiInstagram, color: 'bg-pink-500',link:'https://www.instagram.com/gnyanamani_institutions/' },
+        { Icon: FiFacebook, color: 'bg-blue-600',link:'https://www.facebook.com/visitgnyanamaniinstitutions/' },
+        { Icon: FiLinkedin, color: 'bg-blue-500',link:'https://www.linkedin.com/company/gnyanamani-educational-institutions/posts/?feedView=all' },
+        // { Icon: FiTwitter, color: 'bg-sky-500',link:'' },
+        { Icon: FiYoutube, color: 'bg-red-600',link:'https://www.youtube.com/@Gnyanamani/featured' },
+        { Icon: FiMail, color: 'bg-yellow-500',link:'info@gct.org.in' }
+        ].map(({ Icon, color,link }, index) => (
           <motion.a
             key={index}
             href="#"
             whileHover={{ scale: 1.1 }}
             className={`block p-2 sm:p-3 rounded-full shadow-lg transition ${color} hover:opacity-80`}
-          >
+          ><a href={link}>
             <Icon className="text-white text-lg sm:text-xl md:text-2xl" />
+          </a>
+            
           </motion.a>
         ))}
       </div>
