@@ -88,7 +88,10 @@ import img8 from '../assets/images/2022_earlier/performance/5.jpg';
 import img9 from '../assets/images/2022_earlier/sports-day/11.jpg';
 
 
+
+
 const Gallery = () => {
+  
   const navigate = useNavigate();
 
   const galleryData = [
@@ -165,6 +168,8 @@ const Gallery = () => {
           </div>
         </div>
       ))}
+      
+
     </section>
   );
 };

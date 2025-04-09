@@ -2,13 +2,29 @@ import { motion } from 'framer-motion';
 import { FiArrowRight,FiArrowLeft } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import img1 from '../assets/images/2024/alumni-meet/1.jpg';
+import img1 from '../assets/images/2024/alumni-meet/3.jpg';
 import img2 from '../assets/images/2024/performance/1.jpg';
 import img3 from '../assets/images/2024/sports-day/4.jpg';
-// import img4 from '../assets/images/2023/cultural/1.jpg';
-// import img5 from '../assets/images/2023/tech-fest/2.jpg';
-// import img6 from '../assets/images/2022/conference/3.jpg';
+
+import img4 from '../assets/images/2023/alumni-meet/1.jpg';
+import img5 from '../assets/images/2023/performance/7.jpg';
+import img6 from '../assets/images/2023/sports-day/5.jpg';
+
+import img7 from '../assets/images/2022_earlier/alumni-meet/1.jpg';
+import img8 from '../assets/images/2022_earlier/performance/5.jpg';
+import img9 from '../assets/images/2022_earlier/sports-day/11.jpg';
+
+import I1 from '../assets/images/campus-pulse/first/1.jpg'
+import I2 from '../assets/images/campus-pulse/second/1.jpg'
+import I3 from '../assets/images/campus-pulse/third/compressed-1.jpg'
+import I4 from '../assets/images/campus-pulse/fourth/compressed-1.jpg'
 const Gallery = () => {
+  const campusimage = [
+    {  image: I1 },
+    { image: I2 },
+    { image: I3 },
+    {image:I4},
+]
   const navigate = useNavigate();
 
   const galleryData = [
@@ -19,19 +35,19 @@ const Gallery = () => {
     },
     {
       year: "2023",
-      images: [img1, img2, img3],
-      categories: ['cultural-fest', 'tech-fest', 'sports-day'],
+      images: [img4, img5, img6],
+      categories: ['alumni-meet', 'performance', 'sports-day'],
     },
     {
       year: "2022 & Earlier",
-      images: [img1, img2, img3],
-      categories: ['conference', 'performance', 'alumni-meet'],
+      images: [img7, img8, img9],
+      categories: ['alumni-meet', 'performance', 'sports-day'],
     },
-    {
-      year: "Workshops & Technical Events",
-      images: [img1, img2, img3],
-      categories: ['robotics-workshop', 'coding-competition', 'research-symposium'],
-    },
+    // {
+    //   year: "Workshops & Technical Events",
+    //   images: [img1, img2, img3],
+    //   categories: ['robotics-workshop', 'coding-competition', 'research-symposium'],
+    // },
   ];
 
   const handleNavigate = (year, category) => {
@@ -39,8 +55,8 @@ const Gallery = () => {
     switch(year) {
       case "2024": path = "/gallery2024"; break;
       case "2023": path = "/gallery2023"; break;
-      case "2022 & Earlier": path = "/archive-gallery"; break;
-      case "Workshops & Technical Events": path = "/tech-gallery"; break;
+      case "2022 & Earlier": path = "/gallery2022-earlier"; break;
+      // case "Workshops & Technical Events": path = "/tech-gallery"; break;
       default: path = "/gallery";
     }
     navigate(`${path}?category=${category}`);
@@ -122,6 +138,35 @@ const Gallery = () => {
             </motion.div>
           </div>
         ))}
+        <motion.section
+                className="py-24 px-6 bg-gradient-to-b from-gray-900 to-black text-light"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+            >
+                <div className="max-w-7xl mx-auto text-center">
+                    <h2 className="text-5xl font-extrabold mb-10 font-inter tracking-wide">Campus Pulse</h2>
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+                        {campusimage.map((item) => (
+                            <motion.div
+                                key={item}
+                                whileHover={{ scale: 1.1 }}
+                                className="aspect-square bg-gray-800 rounded-2xl shadow-lg cursor-pointer flex items-center justify-center transition-transform duration-300 hover:bg-gray-700"
+                            >
+                                {/* <FiImage className="text-4xl text-light/50" /> */}
+                                <img className='w-full h-full rounded-2xl' src={item.image} alt="image"></img>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <Link to='/campus-pulse'>
+                    <button className="bg-blue-600 text-white px-10 py-3 text-lg rounded-full shadow-md hover:bg-blue-500 transition-all cursor-pointer">
+                        Explore Full Gallery
+                    </button>
+                    </Link>
+                    
+                </div>
+            </motion.section>
       </div>
     </section>
   );
