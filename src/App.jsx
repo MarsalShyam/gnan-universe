@@ -10,6 +10,7 @@ import Workshops_tech from './pages/workshops_tech';
 import Events from './pages/Events';
 import Achievements from './pages/Achievements';
 import Gallery from './pages/Gallery';
+import CampusPulse from './pages/CampusPulse';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/events" element={<Events/>}/>
         <Route path="/achievements" element={<Achievements/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
+        <Route path='/campus-pulse' element={<CampusPulse/>}/>
         
       </Routes>
     </Router>

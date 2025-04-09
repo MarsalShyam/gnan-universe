@@ -138,36 +138,39 @@
 
 import { motion } from 'framer-motion'; 
 import { FiCalendar, FiArrowUpRight } from 'react-icons/fi';
-import techimg from '../assets/images/slider1.jpg';
+// import techimg from '../assets/images/slider1.jpg';
+import placimg from '../assets/images/eventspic/pl2.jpg'
+import gnyanfest from '../assets/images/eventspic/gnyanfest1.jpg'
+import graduation from '../assets/images/eventspic/graduation.jpg'
 
 const Events = () => {
   const events = [
     { 
       id: 1, 
-      title: 'Digital Content Masterclass',
-      date: '2025-12-15',
-      type: 'Workshop',
+      title: 'Placement Day 2025',
+      date: '2025-04-10',
+      type: 'Placement Event',
       status: 'upcoming',
-      image:techimg,
-      venue:'Biomedical Block'
+      image:placimg,
+      venue:'GCT,A.K.Samuthiram Pachal,Namakkal'
     },
     { 
       id: 2, 
-      title: 'AI & Future Tech Summit',
-      date: '2025-01-20',
-      type: 'Conference',
+      title: 'Gnyan Fest 2025',
+      date: '2025-04-11',
+      type: 'College Fest',
       status: 'upcoming',
-      image:techimg,
-      venue:'Michal Faradey Hall'
+      image:gnyanfest,
+      venue:'GCT,A.K.Samuthiram Pachal,Namakkal'
     },
     { 
       id: 3, 
-      title: 'Creative UI/UX Hackathon',
-      date: '2025-02-10',
-      type: 'Competition',
+      title: "14'th Graduation Day 2025",
+      date: '2025-04-12',
+      type: 'Graduation Day',
       status: 'upcoming',
-      image:techimg,
-      venue:'Mechnical Block'
+      image:graduation,
+      venue:'GCT,A.K.Samuthiram Pachal,Namakkal'
     },
 
   ];

@@ -2,43 +2,46 @@ import { motion } from 'framer-motion';
 import { FiCalendar, FiArrowUpRight,FiArrowLeft, FiClock } from 'react-icons/fi';
 import techimg from '../assets/images/slider1.jpg';
 import { Link } from 'react-router-dom';
+import placimg from '../assets/images/eventspic/pl2.jpg'
+import gnyanfest from '../assets/images/eventspic/gnyanfest1.jpg'
+import graduation from '../assets/images/eventspic/graduation.jpg'
 
 const Events = () => {
   const allEvents = [
     { 
-      id: 1, 
-      title: 'Digital Content Masterclass',
-      date: '2025-12-15',
-      type: 'Workshop',
-      status: 'upcoming',
-      image: techimg,
-      venue: 'Biomedical Block'
-    },
+          id: 1, 
+          title: 'Placement Day 2025',
+          date: '2025-04-10',
+          type: 'Placement Event',
+          status: 'upcoming',
+          image:placimg,
+          venue:'GCT,A.K.Samuthiram Pachal,Namakkal'
+        },
     { 
-      id: 2, 
-      title: 'AI & Future Tech Summit',
-      date: '2025-04-20',
-      type: 'Conference',
-      status: 'upcoming',
-      image: techimg,
-      venue: 'Michal Faraday Hall'
-    },
+          id: 2, 
+          title: 'Gnyan Fest 2025',
+          date: '2025-04-11',
+          type: 'College Fest',
+          status: 'upcoming',
+          image:gnyanfest,
+          venue:'GCT,A.K.Samuthiram Pachal,Namakkal'
+        },
     { 
-      id: 3, 
-      title: 'Creative UI/UX Hackathon',
-      date: '2024-09-10',
-      type: 'Competition',
-      status: 'past',
-      image: techimg,
-      venue: 'Mechanical Block'
-    },
+          id: 3, 
+          title: "14'th Graduation Day 2025",
+          date: '2025-04-12',
+          type: 'Graduation Day',
+          status: 'upcoming',
+          image:graduation,
+          venue:'GCT,A.K.Samuthiram Pachal,Namakkal'
+        },
     { 
       id: 4, 
       title: 'Robotics Workshop',
-      date: '2024-06-25',
+      date: '2025-03-25',
       type: 'Workshop',
       status: 'past',
-      image: techimg,
+      image: "https://media.istockphoto.com/id/1395428816/photo/group-of-young-people-in-technical-vocational-training-with-teacher.webp?a=1&b=1&s=612x612&w=0&k=20&c=XAjp6spzGLLVXmATSnCfPvNN9uwgKh9nj7q6pEEMXLw=",
       venue: 'Innovation Lab'
     },
   ];

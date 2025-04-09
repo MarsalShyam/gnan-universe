@@ -2,8 +2,20 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiImage } from "react-icons/fi";
 import { FaCheckCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import I1 from '../assets/images/campus-pulse/first/1.jpg'
+import I2 from '../assets/images/campus-pulse/second/1.jpg'
+import I3 from '../assets/images/campus-pulse/third/compressed-1.jpg'
+import I4 from '../assets/images/campus-pulse/fourth/compressed-1.jpg'
 
 export default function Memorabilia() {
+    const campusimage = [
+        {  image: I1 },
+        { image: I2 },
+        { image: I3 },
+        {image:I4},
+    ]
+
     const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
 
@@ -28,19 +40,24 @@ export default function Memorabilia() {
                 <div className="max-w-7xl mx-auto text-center">
                     <h2 className="text-5xl font-extrabold mb-10 font-inter tracking-wide">Campus Pulse</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
-                        {[1, 2, 3, 4].map((item) => (
+                        {campusimage.map((item) => (
                             <motion.div
                                 key={item}
                                 whileHover={{ scale: 1.1 }}
                                 className="aspect-square bg-gray-800 rounded-2xl shadow-lg cursor-pointer flex items-center justify-center transition-transform duration-300 hover:bg-gray-700"
                             >
-                                <FiImage className="text-4xl text-light/50" />
+                                {/* <FiImage className="text-4xl text-light/50" /> */}
+                                <img className='w-full h-full rounded-2xl' src={item.image} alt="image"></img>
                             </motion.div>
                         ))}
                     </div>
-                    <button className="bg-blue-600 text-white px-10 py-3 text-lg rounded-full shadow-md hover:bg-blue-500 transition-all">
+
+                    <Link to='/campus-pulse'>
+                    <button className="bg-blue-600 text-white px-10 py-3 text-lg rounded-full shadow-md hover:bg-blue-500 transition-all cursor-pointer">
                         Explore Full Gallery
                     </button>
+                    </Link>
+                    
                 </div>
             </motion.section>
             

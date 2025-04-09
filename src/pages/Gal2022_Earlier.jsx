@@ -1,28 +1,62 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { FaThList, FaUserGraduate, FaFutbol, FaMusic } from 'react-icons/fa';
 
 const Gal2022_Earlier = () => {
+  const location = useLocation();
+  const navigate = useNavigate();
+
   const [activeTab, setActiveTab] = useState('all');
+  const [images, setImages] = useState([]);
 
-  const images = [
-    { id: 1, src: 'https://picsum.photos/400/300?1', category: 'alumni-meet' },
-    { id: 2, src: 'https://picsum.photos/400/300?2', category: 'sports-day' },
-    { id: 3, src: 'https://picsum.photos/400/300?3', category: 'performance' },
-    { id: 4, src: 'https://picsum.photos/400/300?4', category: 'alumni-meet' },
-    { id: 5, src: 'https://picsum.photos/400/300?5', category: 'sports-day' },
-    { id: 6, src: 'https://picsum.photos/400/300?6', category: 'performance' },
-    { id: 7, src: 'https://picsum.photos/400/300?7', category: 'alumni-meet' },
-    { id: 8, src: 'https://picsum.photos/400/300?8', category: 'sports-day' },
-    { id: 9, src: 'https://picsum.photos/400/300?9', category: 'performance' },
-    { id: 10, src: 'https://picsum.photos/400/300?10', category: 'alumni-meet' },
-    { id: 11, src: 'https://picsum.photos/400/300?11', category: 'sports-day' },
-    { id: 12, src: 'https://picsum.photos/400/300?12', category: 'performance' },
-  ];
+  // Extract category from URL
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoryFromQuery = params.get('category');
+    if (categoryFromQuery) {
+      setActiveTab(categoryFromQuery);
+    }
+  }, [location.search]);
 
-  const filteredImages = activeTab === 'all'
-    ? images
-    : images.filter(img => img.category === activeTab);
+  // Load images dynamically
+  useEffect(() => {
+    const loadImages = async () => {
+      try {
+        const categoryImports = {
+          'alumni-meet': import.meta.glob('../assets/images/2022_earlier/alumni-meet/*.{jpeg,jpg,png,svg}'),
+          'performance': import.meta.glob('../assets/images/2022_earlier/performance/*.{jpeg,jpg,png,svg}'),
+          'sports-day': import.meta.glob('../assets/images/2022_earlier/sports-day/*.{jpeg,jpg,png,svg}'),
+        };
+
+        const loadedImages = [];
+
+        for (const [category, importFn] of Object.entries(categoryImports)) {
+          const imageEntries = Object.entries(importFn);
+
+          for (const [path, importer] of imageEntries) {
+            const image = await importer();
+            const fileName = path.split('/').pop().split('.')[0];
+
+            loadedImages.push({
+              id: `${category}-${fileName}`,
+              src: image.default,
+              category: category,
+            });
+          }
+        }
+
+        setImages(loadedImages.sort(() => Math.random() - 0.5)); // Shuffle
+      } catch (error) {
+        console.error('Error loading images:', error);
+      }
+    };
+
+    loadImages();
+  }, []);
+
+  const filteredImages =
+    activeTab === 'all' ? images : images.filter((img) => img.category === activeTab);
 
   const tabs = [
     { id: 'all', icon: <FaThList />, label: 'All' },
@@ -30,6 +64,16 @@ const Gal2022_Earlier = () => {
     { id: 'sports-day', icon: <FaFutbol />, label: 'Sports Day' },
     { id: 'performance', icon: <FaMusic />, label: 'Performance' },
   ];
+
+  // Handle tab switch + query update
+  const handleTabClick = (tabId) => {
+    setActiveTab(tabId);
+    if (tabId === 'all') {
+      navigate(location.pathname); // remove query
+    } else {
+      navigate(`${location.pathname}?category=${tabId}`);
+    }
+  };
 
   return (
     <div className="min-h-[calc(100vh-4rem)] bg-gray-50 pt-20 px-5 md:px-10">
@@ -42,11 +86,12 @@ const Gal2022_Earlier = () => {
           {tabs.map((tab) => (
             <motion.button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => handleTabClick(tab.id)}
               className={`flex items-center gap-2 px-4 py-2 md:px-6 md:py-3 rounded-full text-sm md:text-base font-medium transition-colors flex-shrink-0
-                ${activeTab === tab.id 
-                  ? 'bg-indigo-600 text-white' 
-                  : 'bg-white text-gray-600 hover:bg-indigo-50'}`}
+                ${activeTab === tab.id
+                  ? 'bg-indigo-600 text-white'
+                  : 'bg-white text-gray-600 hover:bg-indigo-50'
+                }`}
               layout
             >
               {tab.icon}
@@ -59,7 +104,7 @@ const Gal2022_Earlier = () => {
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 px-4 md:px-0"
           layout
         >
-          <AnimatePresence mode='wait'>
+          <AnimatePresence mode="wait">
             {filteredImages.map((image) => (
               <motion.div
                 key={image.id}

@@ -75,9 +75,18 @@
 import { motion } from 'framer-motion';
 import { FiArrowRight } from 'react-icons/fi';
 import { useNavigate } from 'react-router-dom';
-import img1 from '../assets/images/2024/alumni-meet/1.jpg';
+import img1 from '../assets/images/2024/alumni-meet/3.jpg';
 import img2 from '../assets/images/2024/performance/1.jpg';
 import img3 from '../assets/images/2024/sports-day/4.jpg';
+
+import img4 from '../assets/images/2023/alumni-meet/1.jpg';
+import img5 from '../assets/images/2023/performance/7.jpg';
+import img6 from '../assets/images/2023/sports-day/5.jpg';
+
+import img7 from '../assets/images/2022_earlier/alumni-meet/1.jpg';
+import img8 from '../assets/images/2022_earlier/performance/5.jpg';
+import img9 from '../assets/images/2022_earlier/sports-day/11.jpg';
+
 
 const Gallery = () => {
   const navigate = useNavigate();
@@ -90,19 +99,19 @@ const Gallery = () => {
     },
     {
       year: "2023",
-      images: [img1, img2, img3],
+      images: [img4, img5, img6],
       categories: ['alumni-meet', 'performance', 'sports-day'],
     },
     {
       year: "2022 & Earlier",
-      images: [img1, img2, img3],
+      images: [img7, img8, img9],
       categories: ['alumni-meet', 'performance', 'sports-day'],
     },
-    {
-      year: "Workshops & Technical Events",
-      images: ["/images/workshop1.jpg", "/images/workshop2.jpg", "/images/workshop3.jpg"],
-      categories: ['workshop1', 'workshop2', 'workshop3'],
-    },
+    // {
+    //   year: "Workshops & Technical Events",
+    //   images: ["/images/workshop1.jpg", "/images/workshop2.jpg", "/images/workshop3.jpg"],
+    //   categories: ['workshop1', 'workshop2', 'workshop3'],
+    // },
   ];
 
   const handleNavigate = (year, category) => {
@@ -110,7 +119,7 @@ const Gallery = () => {
     if (year === "2024") path = "/gallery2024";
     else if (year === "2023") path = "/gallery2023";
     else if (year === "2022 & Earlier") path = "/gallery2022-earlier";
-    else if (year === "Workshops & Technical Events") path = "/workshops_tech";
+    // else if (year === "Workshops & Technical Events") path = "/workshops_tech";
 
     navigate(`${path}?category=${category}`);
   };

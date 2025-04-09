@@ -15,6 +15,21 @@ import f11 from '../assets/images/achievement/firstRow/12.jpeg';
 import f12 from '../assets/images/achievement/firstRow/13.png';
 import f13 from '../assets/images/achievement/firstRow/14.png';
 import f14 from '../assets/images/achievement/firstRow/15.png';
+//second row
+import s1 from '../assets/images/achievement/secondRow/1.jpg';
+import s2 from '../assets/images/achievement/secondRow/5.jpg';
+import s3 from '../assets/images/achievement/secondRow/4.jpg';
+import s4 from '../assets/images/achievement/secondRow/9.jpg';
+import s5 from '../assets/images/achievement/secondRow/11.jpg';
+import s6 from '../assets/images/achievement/secondRow/12.jpg';
+import s7 from '../assets/images/achievement/secondRow/19.jpg';
+import s8 from '../assets/images/achievement/secondRow/16.jpg';
+import s9 from '../assets/images/achievement/secondRow/21.jpg';
+import s10 from '../assets/images/achievement/secondRow/23.jpg';
+import s11 from '../assets/images/achievement/secondRow/24.jpg';
+import s12 from '../assets/images/achievement/secondRow/26.jpg';
+import s13 from '../assets/images/achievement/secondRow/31.jpg';
+
 
 const Achievements = () => {
   const [isHoveredFirst, setIsHoveredFirst] = useState(false);
@@ -48,12 +63,21 @@ const Achievements = () => {
   ];
 
   const baseSecondRowAchievements = [
-    { title: 'Global Coding Championship', year: '2023', details: 'Secured top 5 rank among 10,000 participants', image: '/images/achievement7.jpg' },
-    { title: 'Innovative Research Grant', year: '2022', details: 'Received funding for AI-driven research', image: '/images/achievement8.jpg' },
-    { title: 'Best UI/UX Design Award', year: '2021', details: 'Recognized for exceptional user experience', image: '/images/achievement9.jpg' },
-    { title: 'Startup Pitch Winner', year: '2020', details: 'Won funding for entrepreneurial startup idea', image: '/images/achievement10.jpg' },
-    { title: 'National Leadership Award', year: '2019', details: 'Acknowledged for leadership in student community', image: '/images/achievement11.jpg' },
-    { title: 'Educational Contribution Award', year: '2018', details: 'For significant impact in technology education', image: '/images/achievement12.jpg' },
+    { title: 'Team PloyVictory', year: '2025', details: 'A versatile group where each member showcased talent in a unique event — from coding to debates, they conquered every corner of the symposium world.', image: s1 },
+    
+    { title: 'Spectrum Squad', year: '2025', details: 'Like a prism of talents, each member of this group shined in their own hue—coding, robotics, design, quiz, you name it—they won it.', image: s2 },
+
+    { title: 'The Eventeers', year: '2025', details: "Masters of multitasking! This team's strength was in diversity, with every member excelling in a completely different competition.", image: s3 },
+
+    { title: 'VarieVictors', year: '2025', details: 'United in difference, this group grabbed golds across different domains. No two members entered the same battlefield—yet all came out champions.', image: s4 },
+    { title: 'Multiverse Minds', year: '2025', details: 'Each member lived in a different universe of events—tech talks, AI challenges, web wars, and more—but together they ruled them all.', image: s5 },
+    { title: 'PatchWork Prodigies', year: '2025', details: "Like a beautiful patchwork quilt, this group was stitched together with distinct skills. Each member left their mark in a different domain.", image: s6 },
+    { title: 'Infinite Vibes', year: '2025', details: "Whether it was logic, art, hardware, or words—this team had infinite vibes and infinite wins from every event they entered individually.", image: s7 },
+    { title: 'SkillStormers', year: '2025', details: "They brought a storm of skills to the symposiums, each member conquering their own niche—from solo coding to group battles.", image: s8 },
+    { title: 'TrailMix Titans', year: '2025', details: "A trail mix of intellect, design, wit, and innovation. Every member brought a different flavor to the victory table.", image: s9 },
+    { title: 'Diverge Dons', year: '2025', details: "They didn’t follow the same path—instead, they diverged. And on each unique path, they achieved excellence.", image: s10 },
+    { title: 'Versatilions', year: '2025', details: "Roaring with versatility, this lion-hearted crew won across debates, software, hardware, and creative events.", image: s11 },
+    { title: 'Quantum Unity', year: '2025', details: "Operating on different frequencies, but entangled in success—this group’s strength was in unique contributions and unified victories.", image: s12 },
   ];
 
   useEffect(() => {
@@ -187,7 +211,7 @@ const Achievements = () => {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.1 }}
-                className="relative bg-white/10 rounded-2xl shadow-xl min-w-[320px] h-[350px] flex flex-col items-center justify-end bg-cover bg-center flex-shrink-0"
+                className="relative bg-white/10 rounded-2xl shadow-xl min-w-[300px] h-[320px] flex flex-col items-center justify-end bg-cover bg-center flex-shrink-0"
                 style={{ backgroundImage: `url(${item.image})` }}
               >
                 <div className="bg-black/50 p-6 rounded-2xl w-full h-[40%] flex flex-col justify-center items-center">
@@ -217,12 +241,12 @@ const Achievements = () => {
               <motion.div
                 key={index}
                 whileHover={{ scale: 1.1 }}
-                className="relative bg-white/10 p-6 rounded-2xl shadow-xl min-w-[320px] h-[350px] flex flex-col items-center bg-cover bg-center flex-shrink-0"
+                className="relative bg-white/10 rounded-2xl shadow-xl min-w-[300px] max-w-[320px] h-[320px] flex flex-col items-center justify-end bg-cover bg-center flex-shrink-0"
                 style={{ backgroundImage: `url(${item.image})` }}
               >
-                <div className=" bg-black/50 p-6 rounded-2xl w-full h-full flex flex-col justify-center items-center">
+                <div className=" bg-black/50 p-6 rounded-2xl w-full h-[35%] flex flex-col justify-center items-center">
                   <h3 className="font-medium text-lg text-center text-white">{item.title}</h3>
-                  <p className="text-sm text-gray-300 text-center">{item.details}</p>
+                  <p className="text-[10px] text-gray-300 text-center">{item.details}</p>
                   <span className="block mt-2 text-blue-300">{item.year}</span>
                 </div>
               </motion.div>
