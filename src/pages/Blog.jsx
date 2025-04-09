@@ -276,7 +276,7 @@
 //   instagram: 'https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png'
 // };
 import { motion } from 'framer-motion';
-import { FiArrowLeft, FiCalendar, FiClock } from 'react-icons/fi';
+import { FiArrowLeft,FiArrowUpRight, FiCalendar, FiClock } from 'react-icons/fi';
 import { FaLinkedin, FaInstagram, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import pdf from '../assets/BlogContent/pdf/harrisgnanprice.pdf'
@@ -402,6 +402,9 @@ const Blog = () => {
                       <div className="flex items-center gap-2">
                         <FiClock />
                         <span>{post.readTime} read</span>
+                      </div>
+                      <div className='flex items-center gap-2 text-blue-400 hover:text-blue-300 transition'>
+                        <span>Details</span><FiArrowUpRight className="text-xl" />
                       </div>
                     </div>
                     <h2 className="text-2xl font-semibold text-blue-300 mb-3">{post.title}</h2>
