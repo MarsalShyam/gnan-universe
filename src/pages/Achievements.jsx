@@ -539,6 +539,7 @@ import f9 from '../assets/images/achievement/firstRow/10.png';
 import f12 from '../assets/images/achievement/firstRow/13.png';
 import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
+import logo from '../assets/images/companyLogo/logos.jpg'
 
 const Achievements = () => {
   // Data
@@ -743,14 +744,17 @@ const Achievements = () => {
 
           {/* Top Recruiters */}
           <motion.section 
-            className="py-12 bg-white/5 backdrop-blur-sm rounded-2xl mt-12"
+            className="py-8 bg-white/5 backdrop-blur-sm rounded-2xl mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
           >
             <h3 className="text-2xl font-bold text-center mb-8 text-blue-300">
-              Our Esteemed Recruiters
+              2024-25 PLACEMENT RECORDS
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-4">
+            <div className='px-4'>
+              <img className='rounded-2xl' src={logo}/>
+            </div>
+            {/* <div className="grid grid-cols-2 md:grid-cols-5 gap-4 px-4">
               {topRecruiters.map((recruiter, index) => (
                 <motion.div
                   key={index}
@@ -763,7 +767,8 @@ const Achievements = () => {
                   </p>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
+
           </motion.section>
         </section>
 

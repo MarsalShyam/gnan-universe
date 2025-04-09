@@ -139,12 +139,12 @@ const Gallery = () => {
           </div>
         ))}
         <motion.section
-                className="py-24 px-6 bg-gradient-to-b from-gray-900 to-black text-light"
+                className="py-24 px-6 bg-gradient-to-b from-gray-900 to-black text-light  rounded-b-2xl"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 viewport={{ once: true }}
             >
-                <div className="max-w-7xl mx-auto text-center">
+                <div className="max-w-8xl mx-auto text-center">
                     <h2 className="text-5xl font-extrabold mb-10 font-inter tracking-wide">Campus Pulse</h2>
                     <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
                         {campusimage.map((item) => (
