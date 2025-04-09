@@ -541,6 +541,14 @@ import { Link } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 import logo from '../assets/images/companyLogo/logos.jpg'
 
+import st1 from '../assets/images/achievement/startup/1.jpg'
+import st2 from '../assets/images/achievement/startup/2.jpg'
+import st3 from '../assets/images/achievement/startup/3.jpg'
+import st4 from '../assets/images/achievement/startup/4.jpg'
+import st5 from '../assets/images/achievement/startup/5.jpg'
+import st6 from '../assets/images/achievement/startup/6.jpg'
+
+
 const Achievements = () => {
   // Data
   const statistics = [
@@ -578,12 +586,43 @@ const Achievements = () => {
     ],
     studentSuccess: [
       {
-        title: 'Global Coding Championship',
-        year: '2023',
-        details: 'Secured top 5 rank among 10,000 participants',
-        image: f12,
+        title: 'MBA',
+        year: '2024',
+        details: 'Divya Desserts and K.R.V Event Management & Photography',
+        image: st1,
         icon: <FiUsers />
-      }
+      },
+      {
+        title: 'MCA',
+        year: '2025',
+        details: 'Learning Entrepreneurship with Expert Mentoring',
+        image: st2,
+        icon: <FiUsers />
+      },
+      {
+        title: 'EEE',
+        year: '2025',
+        details: 'Innovate, Structure & Pitch',
+        image: st3,
+        icon: <FiUsers />
+      },
+      {
+        title: 'AI & DS',
+        year: '2025',
+        details: 'HCTMM MEDTECH: Transforming Healthcare with 24/7 Smart Medical Kiosks for Instant Health Checkup, Telemedicine and Automated Medicine Dispensing',
+        image: st5,
+        icon: <FiUsers />
+      },
+      {
+        title: 'BME',
+        year: '2025',
+        details: 'Light Blue Medical Clinic Presentation & Smart Inhaler Health System',
+        image: st6,
+        icon: <FiUsers />
+      },
+      
+
+
     ],
     placements: [
       { 
@@ -632,7 +671,7 @@ const Achievements = () => {
       className="relative bg-white/10 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all h-[400px]"
       whileHover={{ y: -10 }}
     >
-      <div className="relative h-60 overflow-hidden">
+      <div className="relative h-70 overflow-hidden">
         <img 
           src={achievement.image} 
           alt={achievement.title}
