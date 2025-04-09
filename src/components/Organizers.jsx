@@ -1,15 +1,19 @@
 import { motion } from 'framer-motion';
 import { FiLinkedin, FiMail, FiUser } from 'react-icons/fi';
 import { useEffect, useRef, useState } from 'react';
+import cp from '../assets/images/visinors/cp.jpg'
+import cps from '../assets/images/visinors/cps.png'
+import vsp from '../assets/images/visinors/vsp.jpg'
+
 import ganpat from '../assets/images/teamheader/ganpat.jpg'
 import naveen from '../assets/images/teamheader/Naveen.jpg'
 import rahul from '../assets/images/teamheader/Rahul.jpg'
 
 const organizers = [
-  { name: 'Dr. T. Arangannal', role: 'Chairman', linkedin: '#', email: '#',image:'' },
-  { name: 'Mrs. P. Malaleena', role: 'Chairperson', linkedin: '#', email: '#',image:'' },
-  { name: 'Ms. Madhuvanthinie Arangannal', role: 'Vice-Chairperson', linkedin: '#', email: '#',image:'' },
-  { name: 'eamims Kumar', role: 'Faculty Coordinator', linkedin: '#', email: '#',image:'' }
+  { name: 'Dr. T. Arangannal', role: 'Chairman', linkedin: '#', email: '#',image:cp },
+  { name: 'Mrs. P. Malaleena', role: 'Chairperson', linkedin: '#', email: '#',image:cps },
+  { name: 'Ms. Madhuvanthinie Arangannal', role: 'Vice-Chairperson', linkedin: '#', email: '#',image:vsp },
+  { name: 'eamims Kumar', role: 'Faculty Coordinator', linkedin: '#', email: '#',image:'https://media.istockphoto.com/id/2197572485/photo/neon-user-profile-icon-glowing-neon-line-blue-color-user-profile-or-people-icon-on-the-black.webp?a=1&b=1&s=612x612&w=0&k=20&c=-KytgoTnbHoI6ULud6SanIvo2euK11udwAPSOvSn5fU=' }
 ];
 
 const socialClubMembers = [
@@ -60,10 +64,11 @@ const Organizers = () => {
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              className="bg-gray-700 rounded-2xl p-6 text-center shadow-xl"
+              className="bg-gray-700 rounded-2xl p-4 text-center shadow-xl"
             >
-              <div className="w-24 h-24 rounded-full bg-gray-600 mx-auto mb-6 flex items-center justify-center">
-                <FiUser className="text-3xl text-gray-300" />
+              <div className="w-32 h-32 rounded-full bg-gray-600 mx-auto mb-6 flex items-center justify-center border border-black">
+                {/* <FiUser className="text-3xl text-gray-300" /> */}
+                <img className='w-full h-full rounded-full' src={member.image}/>
               </div>
               <h3 className="text-xl font-semibold mb-2">{member.name}</h3>
               <p className="text-gray-400 font-medium mb-4">{member.role}</p>
