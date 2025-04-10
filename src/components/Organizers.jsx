@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 import cp from '../assets/images/visinors/cp.jpg'
 import cps from '../assets/images/visinors/cps.png'
 import vsp from '../assets/images/visinors/vsp.jpg'
+import fc from '../assets/images/visinors/fc.jpg'
 
 import ganpat from '../assets/images/teamheader/ganpat.jpg'
 import naveen from '../assets/images/teamheader/Naveen.jpg'
@@ -13,7 +14,7 @@ const organizers = [
   { name: 'Dr. T. Arangannal', role: 'Chairman', linkedin: '#', email: '#',image:cp },
   { name: 'Mrs. P. Malaleena', role: 'Chairperson', linkedin: '#', email: '#',image:cps },
   { name: 'Ms. Madhuvanthinie Arangannal', role: 'Vice-Chairperson', linkedin: '#', email: '#',image:vsp },
-  { name: 'eamims Kumar', role: 'Faculty Coordinator', linkedin: '#', email: '#',image:'https://media.istockphoto.com/id/2197572485/photo/neon-user-profile-icon-glowing-neon-line-blue-color-user-profile-or-people-icon-on-the-black.webp?a=1&b=1&s=612x612&w=0&k=20&c=-KytgoTnbHoI6ULud6SanIvo2euK11udwAPSOvSn5fU=' }
+  { name: 'Gopinath S', role: 'Faculty Coordinator', linkedin: '#', email: '#',image:fc }
 ];
 
 const socialClubMembers = [

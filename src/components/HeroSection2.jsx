@@ -85,7 +85,7 @@ const HeroSection2 = () => {
           href="https://gct.org.in/"
           className="bg-blue-500 text-white px-4 py-3 sm:px-6 sm:py-4 rounded-r-full text-sm sm:text-lg font-semibold shadow-lg transition hover:bg-blue-600"
         >
-          Visit Site
+          Main Site
         </motion.a>
       </div>
       
