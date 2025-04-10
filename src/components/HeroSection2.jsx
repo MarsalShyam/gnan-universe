@@ -217,7 +217,7 @@ const HeroSection2 = () => {
 
           <motion.div
             onClick={() => setHide(true)}
-            className="z-10 absolute top-0 left-0 p-1 m-2 bg-ve text-white text-2xl rounded-full shadow-lg shadow-red-400 cursor-pointer"
+            className="z-10 absolute top-0 left-0 p-1 m-2 bg-ve text-red-500 text-2xl rounded-full shadow-lg shadow-red-400 cursor-pointer"
             animate={{
               scale: [1, 1.2, 1],
               boxShadow: [
