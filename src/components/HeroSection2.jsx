@@ -4,7 +4,7 @@ import { motion, useMotionValue, useTransform, animate } from 'framer-motion';
 import { FiInstagram, FiCamera, FiVideo, FiFacebook, FiDownload, FiLinkedin, FiTwitter, FiYoutube, FiMail } from 'react-icons/fi';
 import { FiArrowRight, FiChevronDown } from 'react-icons/fi';
 import { FaWhatsapp } from 'react-icons/fa';
-import ticket from '../assets/images/gnyanfest.png';
+import ticket from '../assets/images/ticket2.png';
 import slider1 from '../assets/images/slider1.jpg';
 import { AiOutlineClose } from "react-icons/ai";
 import { Link } from 'react-router-dom';
@@ -28,7 +28,7 @@ const AnimatedNumber = ({ value }) => {
 };
 
 const HeroSection2 = () => {
-  const [hide,setHide]=useState(false);
+  const [hide, setHide] = useState(false);
 
   const calculateTimeLeft = () => {
     const eventDate = new Date("2025-04-11T00:00:00").getTime(); // Changed to April 11
@@ -79,7 +79,7 @@ const HeroSection2 = () => {
       </div>
 
       {/* Visit Site Button */}
-      
+
       <div className="fixed left-0 top-1/3 -translate-y-1/2 z-50">
         <motion.a
           href="https://gct.org.in/"
@@ -88,18 +88,18 @@ const HeroSection2 = () => {
           Main Site
         </motion.a>
       </div>
-      
-      
+
+
 
       {/* Social Media Icons */}
       <div className="fixed right-4 top-1/2 -translate-y-1/2 space-y-2 sm:space-y-4 z-40 flex flex-col">
-        {[{ Icon: FiInstagram, color: 'bg-pink-500',link:'https://www.instagram.com/gnyanamani_institutions/' },
-        { Icon: FiFacebook, color: 'bg-blue-600',link:'https://www.facebook.com/visitgnyanamaniinstitutions/' },
-        { Icon: FiLinkedin, color: 'bg-blue-500',link:'https://www.linkedin.com/company/gnyanamani-educational-institutions/posts/?feedView=all' },
+        {[{ Icon: FiInstagram, color: 'bg-pink-500', link: 'https://www.instagram.com/gnyanamani_institutions/' },
+        { Icon: FiFacebook, color: 'bg-blue-600', link: 'https://www.facebook.com/visitgnyanamaniinstitutions/' },
+        { Icon: FiLinkedin, color: 'bg-blue-500', link: 'https://www.linkedin.com/company/gnyanamani-educational-institutions/posts/?feedView=all' },
         // { Icon: FiTwitter, color: 'bg-sky-500',link:'' },
-        { Icon: FiYoutube, color: 'bg-red-600',link:'https://www.youtube.com/@Gnyanamani/featured' },
-        { Icon: FiMail, color: 'bg-yellow-500',link:'mailto:info@gct.org.in' }
-        ].map(({ Icon, color,link }, index) => (
+        { Icon: FiYoutube, color: 'bg-red-600', link: 'https://www.youtube.com/@Gnyanamani/featured' },
+        { Icon: FiMail, color: 'bg-yellow-500', link: 'mailto:info@gct.org.in' }
+        ].map(({ Icon, color, link }, index) => (
           <motion.a
             key={index}
             href={link}
@@ -107,7 +107,7 @@ const HeroSection2 = () => {
             className={`block p-2 sm:p-3 rounded-full shadow-lg transition ${color} hover:opacity-80`}
           >
             <Icon className="text-white text-lg sm:text-xl md:text-2xl" />
-      
+
           </motion.a>
         ))}
       </div>
@@ -187,24 +187,24 @@ const HeroSection2 = () => {
             transition={{ delay: 0.6 }}
           >
             <Link to='/events'>
-            <button className="bg-blue-500 px-3 md:px-6 py-3 rounded-full hover:bg-blue-600 transition shadow-lg flex items-center gap-2 justify-center text-sm sm:text-base">
-              Explore Events <FiArrowRight />
-            </button>
+              <button className="bg-blue-500 px-3 md:px-6 py-3 rounded-full hover:bg-blue-600 transition shadow-lg flex items-center gap-2 justify-center text-sm sm:text-base">
+                Explore Events <FiArrowRight />
+              </button>
             </Link>
-            
+
             <a href="https://www.instagram.com/gnyanamani_institutions/reels/"><button className="border-2 border-white px-3 md:px-6 py-3 rounded-full hover:bg-white hover:text-gray-900 transition text-sm sm:text-base">
               Watch Showreel
             </button></a>
-            
+
           </motion.div>
         </div>
       </motion.div>
 
       {/* Bottom Sections */}
       <div className=" container mx-auto px-4 sm:px-6 mt-8 space-y-6 sm:space-y-8">
-        
+
         {/* Countdown Section */}
-        <div className= {`border relative ${hide==true?"hidden":""}
+        <div className={`border relative ${hide == true ? "hidden" : ""}
   flex flex-col md:flex-row 
   bg-transparent backdrop-blur-sm 
   text-white rounded-xl 
@@ -213,27 +213,27 @@ const HeroSection2 = () => {
   transition-shadow duration-300
   max-w-4xl mx-auto 
   justify-center items-center`}
->    
+        >
 
-<motion.div
-  onClick={() => setHide(true)}
-  className="z-10 absolute top-0 left-0 p-1 m-2 bg-ve text-white text-2xl rounded-full shadow-lg shadow-red-400 cursor-pointer"
-  animate={{
-    scale: [1, 1.2, 1],
-    boxShadow: [
-      "0 0 0px rgba(248,113,113, 0.5)",    // soft red
-      "0 0 20px rgba(248,113,113, 0.8)",   // glow expand
-      "0 0 0px rgba(248,113,113, 0.5)"     // back to soft
-    ],
-  }}
-  transition={{
-    duration: 1,
-    repeat: Infinity,
-    ease: "easeInOut",
-  }}
->
-  <AiOutlineClose />
-</motion.div>
+          <motion.div
+            onClick={() => setHide(true)}
+            className="z-10 absolute top-0 left-0 p-1 m-2 bg-ve text-white text-2xl rounded-full shadow-lg shadow-red-400 cursor-pointer"
+            animate={{
+              scale: [1, 1.2, 1],
+              boxShadow: [
+                "0 0 0px rgba(248,113,113, 0.5)",    // soft red
+                "0 0 20px rgba(248,113,113, 0.8)",   // glow expand
+                "0 0 0px rgba(248,113,113, 0.5)"     // back to soft
+              ],
+            }}
+            transition={{
+              duration: 1,
+              repeat: Infinity,
+              ease: "easeInOut",
+            }}
+          >
+            <AiOutlineClose />
+          </motion.div>
 
 
           <div className='text-center  md:py-6 px-4'>
@@ -257,7 +257,7 @@ const HeroSection2 = () => {
             </div>
           </div>
           <div
-            className="border md:border-none h-28  md:h-40 w-full bg-center bg-no-repeat bg-contain sm:bg-cover overflow-hidden"
+            className="border md:border-none h-28  md:h-40 w-full bg-center bg-no-repeat bg-contain sm:bg-cover overflow-hidden rounded-xl"
             style={{
               backgroundImage: `url(${ticket})`,
               backgroundColor: 'transparent'
