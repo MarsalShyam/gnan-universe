@@ -70,9 +70,9 @@ const HeroSection2 = () => {
       {/* Floating WhatsApp Icon */}
       <div className="fixed left-4 bottom-4 z-40">
         <motion.a
-          href="https://wa.me/yourwhatsapplink"
+          href="https://wa.me/919955652437?text=Welcome%21%20How%20can%20we%20help%20you?%20Please%20ping%20me%20the%20issue." target='_blank'
           whileHover={{ scale: 1.1 }}
-          className="block bg-green-500 p-3 sm:p-4 rounded-full shadow-lg transition hover:bg-green-600"
+          className="block bg-green-500 p-3 sm:p-4 rounded-full shadow-lg transition hover:bg-green-600 flex justify-center items-center"
         >
           <FaWhatsapp className="text-white text-2xl sm:text-3xl" />
         </motion.a>
@@ -203,7 +203,7 @@ const HeroSection2 = () => {
       {/* Bottom Sections */}
       <div className=" container mx-auto px-4 sm:px-6 mt-8 space-y-6 sm:space-y-8">
 
-        {/* Countdown Section */}
+        {/* Countdown Section
         {/* <div className={`border relative ${hide == true ? "hidden" : ""}
   flex flex-col md:flex-row 
   bg-transparent backdrop-blur-sm 
@@ -265,7 +265,7 @@ const HeroSection2 = () => {
           >
             {/* Content */}
           {/* </div>
-        </div> */} 
+        </div> */}
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
