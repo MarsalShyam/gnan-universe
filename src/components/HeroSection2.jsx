@@ -204,7 +204,7 @@ const HeroSection2 = () => {
       <div className=" container mx-auto px-4 sm:px-6 mt-8 space-y-6 sm:space-y-8">
 
         {/* Countdown Section */}
-        <div className={`border relative ${hide == true ? "hidden" : ""}
+        {/* <div className={`border relative ${hide == true ? "hidden" : ""}
   flex flex-col md:flex-row 
   bg-transparent backdrop-blur-sm 
   text-white rounded-xl 
@@ -264,8 +264,8 @@ const HeroSection2 = () => {
             }}
           >
             {/* Content */}
-          </div>
-        </div>
+          {/* </div>
+        </div> */} 
 
         {/* Stats Cards */}
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto">
