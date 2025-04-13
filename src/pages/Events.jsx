@@ -5,8 +5,14 @@ import { Link } from 'react-router-dom';
 import placimg from '../assets/images/eventspic/pl2.jpg'
 import gnyanfest from '../assets/images/eventspic/gnyanfest1.jpg'
 import graduation from '../assets/images/eventspic/graduation.jpg'
+import { Helmet } from 'react-helmet';
 
 const Events = () => {
+  <Helmet>
+  <title>GCT Events | Gnyan Media Universe</title>
+  <meta name="description" content="Check out all past and upcoming events happening at Gnanamani College of Technology, hosted by various student teams." />
+</Helmet>
+
   const allEvents = [
     { 
           id: 1, 

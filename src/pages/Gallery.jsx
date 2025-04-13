@@ -18,7 +18,19 @@ import I1 from '../assets/images/campus-pulse/first/1.jpg'
 import I2 from '../assets/images/campus-pulse/second/1.jpg'
 import I3 from '../assets/images/campus-pulse/third/compressed-1.jpg'
 import I4 from '../assets/images/campus-pulse/fourth/compressed-1.jpg'
+import { Helmet } from "react-helmet";
 const Gallery = () => {
+  
+
+<Helmet>
+  <title>Gallery | Gnyan Media Universe - GCT Memories</title>
+  <meta name="description" content="Explore the official media gallery of Gnanamani College of Technology - event snapshots, student moments, and college vibes." />
+  <meta property="og:title" content="GCT Gallery - Gnyan Media Universe" />
+  <meta property="og:description" content="Official photo gallery of Gnanamani College events and moments." />
+  <meta property="og:image" content="https://gnyanmediauniverse.vercel.app/unilogo.png" />
+  <meta property="og:url" content="https://gnyanmediauniverse.vercel.app/gallery" />
+</Helmet>
+
   const campusimage = [
     {  image: I1 },
     { image: I2 },

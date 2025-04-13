@@ -1,5 +1,6 @@
 // import { motion } from 'framer-motion';
 // import { FiImage } from 'react-icons/fi';
+import { Helmet } from 'react-helmet';
 import HeroSection from '../components/HeroSection';
 import Events from '../components/Events';
 import Achievements from '../components/Achievements';
@@ -7,9 +8,16 @@ import Gallery from '../components/Gallery';
 import Organizers from '../components/Organizers';
 import Memorabilia from '../components/Memorabillia';
 import HeroSection2 from '../components/HeroSection2';
+import AboutSection from '../components/AboutSection';
 // import CollegeLogo from '../components/CollegeLogo';
 
 const Home = () => {
+    <Helmet>
+  <title>Gnyan Media Universe | Official Gallery</title>
+  <meta name="description" content="Explore vibrant college life at Gnanamani College of Technology through photos, events, blogs and achievements." />
+  <meta property="og:title" content="GCT Official Gallery - Gnyan Media Universe" />
+</Helmet>
+
     return (
         <div className="pt-16"> {/* Offset for fixed navbar */}
         {/* <CollegeLogo/> */}
@@ -20,7 +28,7 @@ const Home = () => {
             <Gallery />
             <Organizers />
             <Memorabilia/>
-
+            <AboutSection/>
             {/* Memorabilia Section */}
             {/* <motion.section
                 className="py-20 px-4 bg-dark"

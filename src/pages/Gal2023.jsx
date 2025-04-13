@@ -115,8 +115,13 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { FaThList, FaUserGraduate, FaFutbol, FaMusic } from 'react-icons/fa';
-
+import { Helmet } from 'react-helmet';
 const Gal2023 = () => {
+  <Helmet>
+  <title>Gallery 2023 - Gnanamani College of Technology</title>
+  <meta name="description" content="Photos and memories from 2023 events, workshops and fests at Gnanamani College." />
+</Helmet>
+
   const location = useLocation();
   const navigate = useNavigate();
 

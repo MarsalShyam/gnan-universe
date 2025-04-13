@@ -282,7 +282,7 @@ import { Link } from 'react-router-dom';
 import pdf from '../assets/BlogContent/pdf/harrisgnanprice.pdf'
 import gnanmlogo from '../assets/images/unilogo.png'
 import placeimg from '../assets/BlogContent/images/placeimage.jpg'
-
+import { Helmet } from "react-helmet";
 const platformThumbnails = {
   twitter: 'https://upload.wikimedia.org/wikipedia/en/6/60/Twitter_Logo_as_of_2021.svg',
   linkedin: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png',
@@ -291,6 +291,17 @@ const platformThumbnails = {
 };
 
 const Blog = () => {
+ 
+
+<Helmet>
+  <title>Campus Blogs | Gnyan Media Universe - GCT Voices</title>
+  <meta name="description" content="Dive into student blogs sharing thoughts, experiences, college life stories, and more from Gnanamani College of Technology." />
+  <meta property="og:title" content="Student Blogs - Gnyan Media Universe" />
+  <meta property="og:description" content="Read insightful blogs by GCT students and faculty." />
+  <meta property="og:image" content="https://gnyanmediauniverse.vercel.app/unilogo.png" />
+  <meta property="og:url" content="https://gnyanmediauniverse.vercel.app/blog" />
+</Helmet>
+
   const hoverEffect = {
     scale: 1.05,
     boxShadow: '0px 0px 10px rgba(255, 255, 255, 0.5)'

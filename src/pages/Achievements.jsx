@@ -547,9 +547,20 @@ import st3 from '../assets/images/achievement/startup/3.jpg'
 import st4 from '../assets/images/achievement/startup/4.jpg'
 import st5 from '../assets/images/achievement/startup/5.jpg'
 import st6 from '../assets/images/achievement/startup/6.jpg'
-
+import { Helmet } from "react-helmet";
 
 const Achievements = () => {
+  
+
+<Helmet>
+  <title>Student Achievements | Gnyan Media Universe - GCT</title>
+  <meta name="description" content="Celebrate the success stories of students at Gnanamani College of Technology. Explore awards, recognitions, and competitions won." />
+  <meta property="og:title" content="GCT Achievements - Gnyan Media Universe" />
+  <meta property="og:description" content="Catch up on the major student achievements and accolades at GCT." />
+  <meta property="og:image" content="https://gnyanmediauniverse.vercel.app/unilogo.png" />
+  <meta property="og:url" content="https://gnyanmediauniverse.vercel.app/achievements" />
+</Helmet>
+
   // Data
   const statistics = [
     { value: '100+', label: 'National Awards', icon: <FiAward /> },

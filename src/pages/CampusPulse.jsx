@@ -2,8 +2,19 @@ import { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence, LayoutGroup } from 'framer-motion';
 import { FaThList, FaUserGraduate, FaFutbol, FaMusic } from 'react-icons/fa';
-
+import { Helmet } from "react-helmet";
 const CampusPulse = () => {
+  
+
+<Helmet>
+  <title>Campus Pulse | Latest News & Voices - GCT</title>
+  <meta name="description" content="Stay in sync with trending campus news, student opinions, and campus activities from Gnanamani College of Technology." />
+  <meta property="og:title" content="Campus Pulse - GCT Social Media Universe" />
+  <meta property="og:description" content="Latest insights and campus voices from Gnanamani College." />
+  <meta property="og:image" content="https://gnyanmediauniverse.vercel.app/unilogo.png" />
+  <meta property="og:url" content="https://gnyanmediauniverse.vercel.app/campuspulse" />
+</Helmet>
+
   const location = useLocation();
   const navigate = useNavigate();
 
