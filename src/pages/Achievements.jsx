@@ -859,6 +859,8 @@ const Achievements = () => {
           
         </motion.div>
       </section>
+      <p>See how our students shine! Don’t miss the <Link to="/gallery2024" className="text-green-500 underline">Gallery 2024</Link> section.</p>
+
     </div>
   );
 };

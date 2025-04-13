@@ -11,6 +11,7 @@ import Events from './pages/Events';
 import Achievements from './pages/Achievements';
 import Gallery from './pages/Gallery';
 import CampusPulse from './pages/CampusPulse';
+import NotFound from './pages/NotFound';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/achievements" element={<Achievements/>}/>
         <Route path="/gallery" element={<Gallery/>}/>
         <Route path='/campus-pulse' element={<CampusPulse/>}/>
+        <Route path='*' element={<NotFound/>}/>
         
       </Routes>
     </Router>

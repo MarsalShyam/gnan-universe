@@ -451,6 +451,8 @@ const Blog = () => {
           </div>
         </div>
       </section>
+      <p>Want to know more about our student creators? Visit the <Link to="/achievements" className="text-purple-500 underline">Campus Pulse</Link> section!</p>
+
     </div>
   );
 };

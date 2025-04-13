@@ -184,6 +184,8 @@ const Events = () => {
           </div>
         )}
       </div>
+      <p>Check out our <Link to="/gallery2024" className="text-blue-500 underline">2024 gallery</Link> to relive amazing moments.</p>
+
     </section>
   );
 };
